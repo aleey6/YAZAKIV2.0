@@ -317,6 +317,20 @@ def db_size_bytes() -> int:
     """Taille du fichier .db (0 si inexistant)."""
     return DB_PATH.stat().st_size if DB_PATH.exists() else 0
 
+def clear_all_invoices() -> bool:
+    """Supprime TOUTES les factures de la base et réinitialise le compteur AUTOINCREMENT."""
+    init_db()
+    with get_conn() as conn:
+        # 1. Supprimer toutes les lignes de la table principale
+        cur = conn.execute("DELETE FROM invoices")
+        
+        # 2. Remettre le compteur de l'AUTOINCREMENT à 0
+        try:
+            conn.execute("DELETE FROM sqlite_sequence WHERE name='invoices'")
+        except Exception:
+            pass  # Si la table interne de SQLite n'existe pas encore, on ignore
+            
+        return cur.rowcount > 0
 
 if __name__ == "__main__":  # diagnostic rapide
     init_db()

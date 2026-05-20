@@ -192,8 +192,13 @@ with tab_extract:
                 st.error(f"❌ Impossible de charger EasyOCR : `{ocr_error}`")
                 st.stop()
 
-        # Nettoyer les anciennes extractions
+        # Nettoyer les anciennes extractions f-l-glessa
         st.session_state.all_invoices = []
+        
+        # SÉCURITÉ : Vider l'ancienne clé de sauvegarde pour forcer SQLite à réenregistrer le nouveau batch
+        for key in list(st.session_state.keys()):
+            if key.startswith("saved_"):
+                del st.session_state[key]
         
         # Boucle sur TOUS les fichiers uploadés
         for idx, file in enumerate(uploaded_files):
@@ -208,15 +213,23 @@ with tab_extract:
                 status_text.caption(status)
 
             try:
-                # Lire les bytes du fichier actuel
+                # Réinitialiser le pointeur du fichier et lire le contenu
+                file.seek(0)
                 pdf_bytes_current = file.read()
                 buf = io.BytesIO(pdf_bytes_current)
                 
-                # Extraction
+                # Extraction du PDF actuel
                 invoice = parse_invoice(buf, ocr_engine=ocr_engine, progress_callback=on_progress)
                 invoice.source_file = file.name
                 
-                # Sauvegarder dans la liste globale
+                # 🟢 COPIER / COLLER ICI :
+                from datetime import datetime
+                current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+                clean_filename = file.name.replace(".pdf", "").replace(".PDF", "").replace(" ", "_")
+                invoice.invoice_number = f"{clean_filename}_{current_time}"
+                # ----------------------------------------------------------------------------
+
+                # Sauvegarder dans la liste globale de session
                 st.session_state.all_invoices.append(invoice)
 
                 progress_bar.progress(100, text="✅ Extraction terminée !")
@@ -227,28 +240,19 @@ with tab_extract:
                 else:
                     st.success(f"✅ {len(invoice.contracts)} pages de contrat extraites pour {file.name}.")
                 
-                # --- AUTO-SAUVEGARDE POUR CHAQUE FICHIER ---
+                # 5. AUTO-SAUVEGARDE DIRECTE DANS SQLITE POUR CHAQUE FICHIER DISTINCT
                 if plant and dept and project:
                     record = save_invoice_record(invoice, plant, dept, project)
-                    invoice_key = f"{plant}_{dept}_{project}_{invoice.invoice_number}_{idx}"
-                    
-                    DATA_DIR.mkdir(exist_ok=True)
-                    filename = safe_filename(f"{plant}_{dept}_{project}_{invoice.invoice_number or f'facture_{idx}'}") + ".json"
-                    per_file = DATA_DIR / filename
-                    per_file.write_text(json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")
-                    
-                    append_to_master(record)
                     try:
                         invoice_id = db.save_invoice(record)
-                        st.success(f"💾 Sauvegarde effectuée — SQLite (id={invoice_id})")
+                        st.success(f"💾 Sauvegardé avec succès dans SQLite — Ligne ID: {invoice_id}")
                     except Exception as exc:
-                        st.warning(f"Fichiers JSON enregistrés, mais SQLite a échoué : {exc}")
-                    
+                        st.warning(f"Problème d'insertion dans SQLite pour {file.name} : {exc}")
+                        
             except Exception as exc:
                 progress_bar.empty()
                 status_text.empty()
                 st.error(f"❌ Échec de l'analyse du fichier {file.name} : {exc}")
-
     # --- AFFICHAGE DU RÉCAPITULATIF GLOBAL ---
     invoices_list = st.session_state.all_invoices
     if invoices_list:
@@ -290,22 +294,7 @@ with tab_extract:
         st.divider()
         st.subheader("Enregistrer toutes ces factures")
 
-        # Enregistrement batch
-        if plant and dept and project:
-            batch_key = f"{plant}_{dept}_{project}_batch_{len(invoices_list)}"
-            if not st.session_state.get(f"saved_{batch_key}"):
-                try:
-                    for inv in invoices_list:
-                        record = save_invoice_record(inv, plant, dept, project)
-                        db.save_invoice(record)
-                    st.session_state[f"saved_{batch_key}"] = True
-                    st.success(f"✅ {len(invoices_list)} factures sauvegardées dans SQLite")
-                except Exception as exc:
-                    st.warning(f"SQLite a échoué pour certaines factures : {exc}")
-            else:
-                st.success(f"✅ Déjà sauvegardé pour {plant} / {dept} / {project}.")
-        else:
-            st.info("Choisissez Usine → Département → Projet dans la barre latérale pour activer la sauvegarde.")
+       
     else:
         st.info("Téléchargez un ou plusieurs PDF puis cliquez sur Extraire les données pour commencer.")
 # ============================================================ ONGLET DÉPENSES
@@ -414,27 +403,49 @@ with tab_expenses:
             st.info("💡 Importez votre fichier Excel `BUDGET.xlsx` pour lancer la confrontation Budget vs Dépenses.")
 # ========================================================== ONGLET HISTORIQUE
 with tab_history:
-    st.subheader("Factures enregistrées (base SQLite)")
+    st.subheader("📚 Liste complète des factures enregistrées")
     
-    col_refresh, _ = st.columns([1, 4])
+    # 🟢 1. Remplacer col_refresh, _ par deux vraies colonnes pour les boutons
+    col_refresh, col_clear, _ = st.columns([1.5, 1.5, 3])
+    
     with col_refresh:
         refresh_clicked = st.button("🔄 Actualiser l'historique", use_container_width=True)
+        if refresh_clicked:
+            st.rerun()
+            
+    with col_clear:
+        # Bouton rouge pour vider l'historique
+        clear_clicked = st.button("🗑️ Vider l'historique", type="primary", use_container_width=True)
+        
+    # 🟢 2. Action d l-bouton jdid
+    if clear_clicked:
+        try:
+            db.clear_all_invoices()
+            st.success("💥 La base de données SQLite a été vidée avec succès !")
+            st.rerun()
+        except Exception as e:
+            st.error(f"Erreur lors du nettoyage de la base : {e}")
         
     try:
-        # Call the actual function from your database.py module
         records = db.list_invoices()
         
         if records:
-            # Convert list of dicts to a clean DataFrame
             history_df = pd.DataFrame(records)
             
-            # Optional: Clean up column display orders or names if needed
-            # e.g., history_df = history_df[['id', 'plant', 'department', 'project', 'invoice_number', 'total', 'created_at']]
+            # Réorganiser l'affichage pour mettre l'ID et la date de sauvegarde au début
+            all_cols = history_df.columns.tolist()
+            desired_order = ['id', 'saved_at', 'plant', 'department', 'project', 'invoice_number', 'invoice_date', 'total', 'montant_ht', 'montant_ttc', 'contracts_count']
+            display_cols = [c for c in desired_order if c in all_cols] + [c for c in all_cols if c not in desired_order]
             
-            st.dataframe(history_df, use_container_width=True, hide_index=True)
+            # Affichage du tableau propre
+            st.dataframe(
+                history_df[display_cols].sort_values(by="id", ascending=False),
+                use_container_width=True,
+                hide_index=True
+            )
             
-            # Metrics quick-glance helper
-            st.caption(f"Total de factures indexées : {len(history_df)}")
+            st.caption(f"📊 Total de factures indexées distinctes f SQLite : {len(history_df)}")
+            
         else:
             st.info("📂 Aucune facture n'a encore été enregistrée dans la base SQLite.")
             
