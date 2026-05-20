@@ -99,6 +99,7 @@ tab_extract, tab_expenses, tab_history = st.tabs(
 
 # ============================================================== ONGLET EXTRAIRE
 # ============================================================== ONGLET EXTRAIRE
+# ============================================================== ONGLET EXTRAIRE
 with tab_extract:
     upload_col, info_col = st.columns([2, 1])
 
@@ -112,12 +113,11 @@ with tab_extract:
     with info_col:
         render_info_card(
             "Calcul du Total",
-            "Extraction en masse (Batch) : L'application va traiter chaque PDF l'un après l'autre."
+            "Extraction en parallèle (Multi-threading) : Tous les fichiers sont traités en même temps."
         )
 
-    # Stocker les bytes du PDF (pour compatibilité avec le code existant)
+    # Stocker les bytes du PDF
     if uploaded_files and len(uploaded_files) > 0:
-        # Pour la compatibilité, on garde une référence au premier fichier
         first_file = uploaded_files[0]
         file_key = f"pdf_bytes_{first_file.name}_{first_file.size}"
         if st.session_state.get("pdf_file_key") != file_key:
@@ -179,10 +179,33 @@ with tab_extract:
         use_container_width=False,
     )
 
-    # Initialiser une liste pour stocker toutes les factures extraites dans le session_state
+    # Initialiser les variables de session indispensables
     if "all_invoices" not in st.session_state:
         st.session_state.all_invoices = []
 
+    # 1️⃣ Fonction isolée li ghadi n-riw ليها wa7ed thread kheddam 3la fichier wa7d
+    def process_single_file(file_obj, ocr_eng):
+        try:
+            # Réinitialiser et lire f nefs l-weqt b m3zl 100% 
+            file_obj.seek(0)
+            file_bytes = file_obj.read()
+            buf = io.BytesIO(file_bytes)
+            
+            # Extraction standard (bla on_progress bache ma y-vibrationich Streamlit Context)
+            invoice_obj = parse_invoice(buf, ocr_engine=ocr_eng, progress_callback=None)
+            invoice_obj.source_file = file_obj.name
+            
+            # Génération timestamp d l'ID unique
+            from datetime import datetime
+            current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+            clean_filename = file_obj.name.replace(".pdf", "").replace(".PDF", "").replace(" ", "_")
+            invoice_obj.invoice_number = f"{clean_filename}_{current_time}"
+            
+            return {"status": "success", "invoice": invoice_obj, "filename": file_obj.name}
+        except Exception as e:
+            return {"status": "error", "message": str(e), "filename": file_obj.name}
+
+    # 2️⃣ Execution melli y-tcliqua l'extraction
     if extract_clicked and uploaded_files:
         ocr_engine = None
         if use_ocr:
@@ -192,109 +215,93 @@ with tab_extract:
                 st.error(f"❌ Impossible de charger EasyOCR : `{ocr_error}`")
                 st.stop()
 
-        # Nettoyer les anciennes extractions f-l-glessa
         st.session_state.all_invoices = []
         
-        # SÉCURITÉ : Vider l'ancienne clé de sauvegarde pour forcer SQLite à réenregistrer le nouveau batch
-        for key in list(st.session_state.keys()):
-            if key.startswith("saved_"):
-                del st.session_state[key]
+        # Lancement du Pool de Threads (Exécution en d99a wa7da)
+        import concurrent.futures
         
-        # Boucle sur TOUS les fichiers uploadés
-        for idx, file in enumerate(uploaded_files):
-            st.markdown(f"### 📄 Traitement du fichier ({idx+1}/{len(uploaded_files)}) : `{file.name}`")
-            
-            progress_bar = st.progress(0, text="Démarrage…")
-            status_text = st.empty()
+        results = []
+        with st.spinner(f"⚡ Extraction en parallèle de {len(uploaded_files)} fichiers en cours..."):
+            with concurrent.futures.ThreadPoolExecutor(max_workers=len(uploaded_files)) as executor:
+                # N-sifto les tâches kamlin l les threads
+                futures = [executor.submit(process_single_file, f, ocr_engine) for f in uploaded_files]
+                # N-tsnnaw les threads kamlin y-salio direct
+                for future in concurrent.futures.as_completed(futures):
+                    results.append(future.result())
 
-            def on_progress(current, total, status):
-                pct = int((current / total) * 100) if total else 0
-                progress_bar.progress(pct, text=f"{status} ({pct}%)")
-                status_text.caption(status)
-
-            try:
-                # Réinitialiser le pointeur du fichier et lire le contenu
-                file.seek(0)
-                pdf_bytes_current = file.read()
-                buf = io.BytesIO(pdf_bytes_current)
+        # 3️⃣ Affichage dyal l'état d kulla fichier w la sauvegarde unique dyalha
+        st.success("🏁 Traitement en masse terminé !")
+        
+        for res in results:
+            fname = res["filename"]
+            if res["status"] == "success":
+                inv = res["invoice"]
+                st.markdown(f"### 📄 `{fname}`")
                 
-                # Extraction du PDF actuel
-                invoice = parse_invoice(buf, ocr_engine=ocr_engine, progress_callback=on_progress)
-                invoice.source_file = file.name
-                
-                # 🟢 COPIER / COLLER ICI :
-                from datetime import datetime
-                current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-                clean_filename = file.name.replace(".pdf", "").replace(".PDF", "").replace(" ", "_")
-                invoice.invoice_number = f"{clean_filename}_{current_time}"
-                # ----------------------------------------------------------------------------
-
-                # Sauvegarder dans la liste globale de session
-                st.session_state.all_invoices.append(invoice)
-
-                progress_bar.progress(100, text="✅ Extraction terminée !")
-                status_text.empty()
-                
-                if len(invoice.contracts) == 0:
-                    st.warning(f"⚠️ 0 contrats extraits pour {file.name}.")
+                if len(inv.contracts) == 0:
+                    st.warning(f"⚠️ 0 contrats extraits pour {fname}.")
                 else:
-                    st.success(f"✅ {len(invoice.contracts)} pages de contrat extraites pour {file.name}.")
+                    st.success(f"✅ {len(inv.contracts)} pages de contrat extraites.")
                 
-                # 5. AUTO-SAUVEGARDE DIRECTE DANS SQLITE POUR CHAQUE FICHIER DISTINCT
+                # Sauvegarde dakhil SQLite
                 if plant and dept and project:
-                    record = save_invoice_record(invoice, plant, dept, project)
+                    record = save_invoice_record(inv, plant, dept, project)
                     try:
                         invoice_id = db.save_invoice(record)
-                        st.success(f"💾 Sauvegardé avec succès dans SQLite — Ligne ID: {invoice_id}")
+                        st.success(f"💾 Sauvegardé dans SQLite — Ligne ID: {invoice_id}")
                     except Exception as exc:
-                        st.warning(f"Problème d'insertion dans SQLite pour {file.name} : {exc}")
-                        
-            except Exception as exc:
-                progress_bar.empty()
-                status_text.empty()
-                st.error(f"❌ Échec de l'analyse du fichier {file.name} : {exc}")
-    # --- AFFICHAGE DU RÉCAPITULATIF GLOBAL ---
+                        st.warning(f"Problème d'insertion dans SQLite : {exc}")
+                
+                # Ajouter à la session globale
+                st.session_state.all_invoices.append(inv)
+            else:
+                st.error(f"❌ Échec de l'analyse du fichier {fname} : {res['message']}")
+
+    # --- AFFICHAGE DU RÉCAPITULATIF GLOBAL ET DES BOUTONS DE TÉLÉCHARGEMENT INDIVIDUELS ---
     invoices_list = st.session_state.all_invoices
     if invoices_list:
         st.divider()
         st.subheader("📊 Récapitulatif de l'extraction en masse")
         
-        # Calculer le total cumulé de toutes les factures
         total_global = sum(inv.total for inv in invoices_list)
         
         m1, m2 = st.columns(2)
         m1.metric("Nombre de factures", len(invoices_list))
         m2.metric("Total cumulé (MAD)", fmt_money(total_global))
 
-        # Combiner tous les dataframes de contrats en un seul
+        # 📥 Affichage des boutons d'extraction séparés pour chaque fichier
+        st.markdown("### 📥 Télécharger les fichiers Excel individuels :")
+        
+        # N-diro une grille de colonnes bache n-7ttou kulla bouton dialha pro
+        for idx, inv in enumerate(invoices_list):
+            col_name, col_btn = st.columns([3, 1])
+            with col_name:
+                st.write(f"📁 Données Excel pour : `{inv.source_file}`")
+            with col_btn:
+                # Génération d l'excel khass b had la facture unique 
+                excel_data = contracts_to_excel(inv) # Kat-généri ghir d l'invoice wa7d
+                
+                st.download_button(
+                    label="📥 Télécharger Excel",
+                    data=excel_data,
+                    file_name=safe_filename(f"Facture_{inv.source_file or idx+1}") + ".xlsx",
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    key=f"dl_btn_{idx}_{inv.invoice_number}" # Clé unique pour Streamlit
+                )
+        
+        st.divider()
         all_dfs = []
         for inv in invoices_list:
             all_dfs.append(contracts_dataframe(inv))
         
         if all_dfs:
-            import pandas as pd
             final_df = pd.concat(all_dfs, ignore_index=True)
             st.dataframe(final_df, use_container_width=True, hide_index=True)
-            
-            # Téléchargement Excel pour toutes les factures
-            # Note: Cette partie nécessiterait une fonction pour combiner tous les contrats en Excel
-            st.download_button(
-                "📥 Télécharger toutes les données (Excel)",
-                data=contracts_to_excel_batch(invoices_list, plant, dept, project),
-                file_name=safe_filename(
-                    f"{plant or 'usine'}_{dept or 'dept'}_{project or 'projet'}_batch_contrats"
-                ) + ".xlsx",
-                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            )
 
         with st.expander("Afficher le JSON complet de toutes les factures"):
             all_invoices_dict = [inv.to_dict() for inv in invoices_list]
             st.json(all_invoices_dict, expanded=False)
-
-        st.divider()
-        st.subheader("Enregistrer toutes ces factures")
-
-       
+            
     else:
         st.info("Téléchargez un ou plusieurs PDF puis cliquez sur Extraire les données pour commencer.")
 # ============================================================ ONGLET DÉPENSES
