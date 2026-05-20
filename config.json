@@ -1,0 +1,65 @@
+{
+  "plants": {
+    "Meknès": {
+      "Informatique": [
+        "Téléphonie Mobile",
+        "Internet & Lignes Fixes",
+        "Licences Logicielles",
+        "Matériel Informatique"
+      ],
+      "Ressources Humaines": [
+        "Recrutement",
+        "Formation",
+        "Services de Paie"
+      ],
+      "Production": [
+        "Ligne A",
+        "Ligne B",
+        "Ligne C"
+      ],
+      "Logistique": [
+        "Transport",
+        "Entreposage"
+      ],
+      "Maintenance": [
+        "Préventive",
+        "Curative"
+      ]
+    },
+    "Tanger": {
+      "Informatique": [
+        "Téléphonie Mobile",
+        "Internet & Lignes Fixes",
+        "Licences Logicielles",
+        "Matériel Informatique"
+      ],
+      "Ressources Humaines": [
+        "Recrutement",
+        "Formation"
+      ],
+      "Production": [
+        "Ligne 1",
+        "Ligne 2"
+      ],
+      "Logistique": [
+        "Transport",
+        "Entreposage"
+      ]
+    },
+    "Kénitra": {
+      "Informatique": [
+        "Téléphonie Mobile",
+        "Internet & Lignes Fixes",
+        "Licences Logicielles"
+      ],
+      "Ressources Humaines": [
+        "Recrutement",
+        "Formation"
+      ],
+      "Production": [
+        "Ligne 1",
+        "Ligne 2"
+      ]
+    }
+  }
+}

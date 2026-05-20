@@ -1,0 +1,3733 @@
+{
+  "saved_at": "2026-05-15T23:18:35",
+  "plant": "Meknes",
+  "department": "IT",
+  "project": "Mobile Telecom",
+  "source_file": "IAM 03-2026.PDF",
+  "client_number": "6.100149.00.00.100002",
+  "invoice_number": "0001848477042026",
+  "invoice_date": "14/04/2026",
+  "period_start": "01/03/2026",
+  "period_end": "31/03/2026",
+  "global_summary": {
+    "page_number": 1,
+    "document_page": "1/86",
+    "frais_abonnement_services": 23898.78,
+    "frais_ponctuels": 24363.05,
+    "montant_ht": 48261.83,
+    "montant_tva": 9652.37,
+    "montant_ttc": 57914.2,
+    "montant_du": 57914.2
+  },
+  "contracts": [
+    {
+      "page_number": 3,
+      "document_page": "2/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 62 72 05 69",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 457.74
+    },
+    {
+      "page_number": 5,
+      "document_page": "3/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 62 72 66 32",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 7,
+      "document_page": "4/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 62 72 01 26",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 9,
+      "document_page": "5/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 62 72 29 30",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 11,
+      "document_page": "6/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 62 72 30 34",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 13,
+      "document_page": "7/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 62 72 09 41",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 15,
+      "document_page": "8/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 62 72 25 96",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Changement d'offre",
+          "amount": 100.0,
+          "date_start": null,
+          "date_end": null
+        },
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 947.74
+    },
+    {
+      "page_number": 17,
+      "document_page": "9/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 66 95 89 78",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 19,
+      "document_page": "10/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 68 09 16 52",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 21,
+      "document_page": "11/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 68 05 35 44",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 23,
+      "document_page": "12/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 66 63 85 72",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 25,
+      "document_page": "13/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 68 54 77 60",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 27,
+      "document_page": "14/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 66 81 72 39",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 29,
+      "document_page": "15/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 68 54 38 20",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 31,
+      "document_page": "16/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 68 13 36 22",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 33,
+      "document_page": "17/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 68 12 27 64",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 35,
+      "document_page": "18/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 66 97 29 82",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 37,
+      "document_page": "19/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 68 35 59 85",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 39,
+      "document_page": "20/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 68 05 11 70",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 41,
+      "document_page": "21/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 68 15 97 88",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 43,
+      "document_page": "22/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 65 89 25 49",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 45,
+      "document_page": "23/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "07 76 05 40 85",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 47,
+      "document_page": "24/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 91 50 76 56",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 49,
+      "document_page": "25/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 91 86 63 84",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 51,
+      "document_page": "26/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 91 87 39 24",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 53,
+      "document_page": "27/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 59 92 38",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": 149.17,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 312.02
+    },
+    {
+      "page_number": 55,
+      "document_page": "28/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 21 11 91",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 57,
+      "document_page": "29/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 65 71 78 24",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 59,
+      "document_page": "30/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 63 69 33 47",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 61,
+      "document_page": "31/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 79 54 71 77",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 63,
+      "document_page": "32/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 69 05 78 82",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 65,
+      "document_page": "33/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "07 76 05 39 18",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 67,
+      "document_page": "34/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 79 50 44 41",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 69,
+      "document_page": "35/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 65 72 02 69",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 71,
+      "document_page": "36/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 79 52 99 02",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 73,
+      "document_page": "37/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 64 48 01 27",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 75,
+      "document_page": "38/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 88 75 71 57",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 77,
+      "document_page": "39/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 65 99 02 93",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 79,
+      "document_page": "40/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 63 69 33 82",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 81,
+      "document_page": "41/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 64 45 37 26",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 83,
+      "document_page": "42/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 65 97 62 34",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 85,
+      "document_page": "43/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "07 76 05 41 71",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 87,
+      "document_page": "44/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 69 03 77 51",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 89,
+      "document_page": "45/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 64 75 46 88",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 40H + 30Go 24 mois",
+          "amount": 162.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 338.68
+    },
+    {
+      "page_number": 91,
+      "document_page": "46/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 69 04 70 82",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 93,
+      "document_page": "47/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 59 85 01",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 728.68
+    },
+    {
+      "page_number": 95,
+      "document_page": "48/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 91 82 52 19",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 97,
+      "document_page": "49/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 59 84 29",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 99,
+      "document_page": "50/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 79 48 69 50",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 101,
+      "document_page": "51/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 91 77 18 31",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 103,
+      "document_page": "52/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 00 34 56",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 105,
+      "document_page": "53/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 07 33 45",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 107,
+      "document_page": "54/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 00 34 42",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 109,
+      "document_page": "55/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 63 44 40 84",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 111,
+      "document_page": "56/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 67 58 81 58",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 113,
+      "document_page": "57/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 63 44 42 23",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 115,
+      "document_page": "58/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 73 98 23 32",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 117,
+      "document_page": "59/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 79 49 14 79",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 119,
+      "document_page": "60/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 19 32 07",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 121,
+      "document_page": "61/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 59 90 93",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 123,
+      "document_page": "62/86",
+      "contract_type": "Forfait Optimis",
+      "phone_number": "06 65 01 35 66",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Frais de plafonnement",
+          "amount": 19.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Forfait 15Go + 15H 24 mois",
+          "amount": 55.17,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        }
+      ],
+      "frais_ponctuels": [],
+      "total_contrat": 74.17
+    },
+    {
+      "page_number": 125,
+      "document_page": "63/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 68 71 77 52",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 127,
+      "document_page": "64/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 88 75 95 90",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 129,
+      "document_page": "65/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 88 75 26 78",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 131,
+      "document_page": "66/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 64 45 31 62",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 133,
+      "document_page": "67/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 63 44 38 34",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 135,
+      "document_page": "68/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 58 74 20",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 137,
+      "document_page": "69/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 19 32 40",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 139,
+      "document_page": "70/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 65 89 07 26",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 141,
+      "document_page": "71/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 63 44 39 28",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 143,
+      "document_page": "72/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 63 44 40 82",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 145,
+      "document_page": "73/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 63 44 38 82",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 147,
+      "document_page": "74/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 61 87 50 34",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 149,
+      "document_page": "75/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 79 51 55 12",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 728.68
+    },
+    {
+      "page_number": 151,
+      "document_page": "76/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 88 75 26 70",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Illimité Mobile National + 30Go 24 mois",
+          "amount": -149.17,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Illimité Mobile National 5G B2B + 50Go 24 mois",
+          "amount": 183.33,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 162.85,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 380.34
+    },
+    {
+      "page_number": 153,
+      "document_page": "77/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 67 60 60 95",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 155,
+      "document_page": "78/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 63 44 40 19",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 157,
+      "document_page": "79/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 69 10 09 75",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 159,
+      "document_page": "80/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 66 62 36 53",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 161,
+      "document_page": "81/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 63 44 44 70",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 163,
+      "document_page": "82/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 64 43 58 81",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 165,
+      "document_page": "83/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 63 44 41 57",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 167,
+      "document_page": "84/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 65 73 15 09",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 169,
+      "document_page": "85/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 79 49 12 16",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    },
+    {
+      "page_number": 171,
+      "document_page": "86/86",
+      "contract_type": "Illimité Mobile Plafonné",
+      "phone_number": "06 60 14 05 19",
+      "period_start": "01/03/2026",
+      "period_end": "31/03/2026",
+      "frais_mensuels": [
+        {
+          "description": "Internet Mobile Gratuit",
+          "amount": 0.0,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/04/2026",
+          "date_end": "30/04/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 24 mois",
+          "amount": -332.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        },
+        {
+          "description": "Tout Illimité Mobile 5G B2B 24 mois",
+          "amount": 357.5,
+          "date_start": "01/03/2026",
+          "date_end": "31/03/2026"
+        }
+      ],
+      "frais_ponctuels": [
+        {
+          "description": "Régularisation",
+          "amount": 465.24,
+          "date_start": null,
+          "date_end": null
+        }
+      ],
+      "total_contrat": 847.74
+    }
+  ],
+  "total": 48261.83
+}
