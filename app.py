@@ -17,7 +17,7 @@ import streamlit as st
 # Imports des modules refactorisés
 from config import load_config, safe_filename, fmt_money, DATA_DIR, ROOT_DIR
 from ui_components import apply_custom_css, init_session_state, render_info_card
-from excel_export import contracts_to_excel
+from excel_export import contracts_to_excel, contracts_to_excel_batch
 from budget_utils import read_budget_from_excel
 from invoice_utils import (
     contracts_dataframe, 
@@ -98,29 +98,30 @@ tab_extract, tab_expenses, tab_history = st.tabs(
 )
 
 # ============================================================== ONGLET EXTRAIRE
+# ============================================================== ONGLET EXTRAIRE
 with tab_extract:
     upload_col, info_col = st.columns([2, 1])
 
     with upload_col:
-        uploaded = st.file_uploader(
-            "Téléchargez une facture IAM multipage (PDF)",
+        uploaded_files = st.file_uploader(
+            "Téléchargez une ou plusieurs factures IAM (PDF)",
             type=["pdf"],
-            accept_multiple_files=False,
+            accept_multiple_files=True,
         )
 
     with info_col:
         render_info_card(
             "Calcul du Total",
-            "Somme du TOTAL CONTRAT de chaque page de contrat — "
-            "c.-à-d. toutes les lignes sauf la première (récapitulatif global), "
-            "projetées sur la colonne Total Contrat."
+            "Extraction en masse (Batch) : L'application va traiter chaque PDF l'un après l'autre."
         )
 
-    # Stocker les bytes du PDF
-    if uploaded is not None:
-        file_key = f"pdf_bytes_{uploaded.name}_{uploaded.size}"
+    # Stocker les bytes du PDF (pour compatibilité avec le code existant)
+    if uploaded_files and len(uploaded_files) > 0:
+        # Pour la compatibilité, on garde une référence au premier fichier
+        first_file = uploaded_files[0]
+        file_key = f"pdf_bytes_{first_file.name}_{first_file.size}"
         if st.session_state.get("pdf_file_key") != file_key:
-            st.session_state.pdf_bytes = uploaded.read()
+            st.session_state.pdf_bytes = first_file.read()
             st.session_state.pdf_file_key = file_key
         pdf_bytes = st.session_state.pdf_bytes
     else:
@@ -174,11 +175,15 @@ with tab_extract:
     extract_clicked = st.button(
         "Extraire les données",
         type="primary",
-        disabled=pdf_bytes is None,
+        disabled=not uploaded_files,
         use_container_width=False,
     )
 
-    if extract_clicked and pdf_bytes is not None:
+    # Initialiser une liste pour stocker toutes les factures extraites dans le session_state
+    if "all_invoices" not in st.session_state:
+        st.session_state.all_invoices = []
+
+    if extract_clicked and uploaded_files:
         ocr_engine = None
         if use_ocr:
             with st.spinner("⏳ Chargement du moteur OCR..."):
@@ -187,7 +192,13 @@ with tab_extract:
                 st.error(f"❌ Impossible de charger EasyOCR : `{ocr_error}`")
                 st.stop()
 
-        with st.spinner("Analyse du PDF en cours..." if not use_ocr else "🔍 OCR en cours..."):
+        # Nettoyer les anciennes extractions
+        st.session_state.all_invoices = []
+        
+        # Boucle sur TOUS les fichiers uploadés
+        for idx, file in enumerate(uploaded_files):
+            st.markdown(f"### 📄 Traitement du fichier ({idx+1}/{len(uploaded_files)}) : `{file.name}`")
+            
             progress_bar = st.progress(0, text="Démarrage…")
             status_text = st.empty()
 
@@ -197,90 +208,106 @@ with tab_extract:
                 status_text.caption(status)
 
             try:
-                buf = io.BytesIO(pdf_bytes)
-                invoice = parse_invoice(buf, ocr_engine=ocr_engine,
-                                        progress_callback=on_progress)
-                invoice.source_file = uploaded.name if uploaded else "inconnu"
-                st.session_state.invoice = invoice
-                st.session_state.uploaded_name = invoice.source_file
+                # Lire les bytes du fichier actuel
+                pdf_bytes_current = file.read()
+                buf = io.BytesIO(pdf_bytes_current)
+                
+                # Extraction
+                invoice = parse_invoice(buf, ocr_engine=ocr_engine, progress_callback=on_progress)
+                invoice.source_file = file.name
+                
+                # Sauvegarder dans la liste globale
+                st.session_state.all_invoices.append(invoice)
 
                 progress_bar.progress(100, text="✅ Extraction terminée !")
                 status_text.empty()
-
+                
                 if len(invoice.contracts) == 0:
-                    st.warning("⚠️ 0 contrats extraits.")
+                    st.warning(f"⚠️ 0 contrats extraits pour {file.name}.")
                 else:
-                    st.success(f"✅ {len(invoice.contracts)} pages de contrat extraites.")
+                    st.success(f"✅ {len(invoice.contracts)} pages de contrat extraites pour {file.name}.")
+                
+                # --- AUTO-SAUVEGARDE POUR CHAQUE FICHIER ---
+                if plant and dept and project:
+                    record = save_invoice_record(invoice, plant, dept, project)
+                    invoice_key = f"{plant}_{dept}_{project}_{invoice.invoice_number}_{idx}"
+                    
+                    DATA_DIR.mkdir(exist_ok=True)
+                    filename = safe_filename(f"{plant}_{dept}_{project}_{invoice.invoice_number or f'facture_{idx}'}") + ".json"
+                    per_file = DATA_DIR / filename
+                    per_file.write_text(json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")
+                    
+                    append_to_master(record)
+                    try:
+                        invoice_id = db.save_invoice(record)
+                        st.success(f"💾 Sauvegarde effectuée — SQLite (id={invoice_id})")
+                    except Exception as exc:
+                        st.warning(f"Fichiers JSON enregistrés, mais SQLite a échoué : {exc}")
+                    
             except Exception as exc:
                 progress_bar.empty()
                 status_text.empty()
-                st.session_state.invoice = None
-                st.error(f"Échec de l'analyse du PDF : {exc}")
+                st.error(f"❌ Échec de l'analyse du fichier {file.name} : {exc}")
 
-    invoice = st.session_state.invoice
+    # --- AFFICHAGE DU RÉCAPITULATIF GLOBAL ---
+    invoices_list = st.session_state.all_invoices
+    if invoices_list:
+        st.divider()
+        st.subheader("📊 Récapitulatif de l'extraction en masse")
+        
+        # Calculer le total cumulé de toutes les factures
+        total_global = sum(inv.total for inv in invoices_list)
+        
+        m1, m2 = st.columns(2)
+        m1.metric("Nombre de factures", len(invoices_list))
+        m2.metric("Total cumulé (MAD)", fmt_money(total_global))
 
-    if invoice is not None:
-        st.subheader("Récapitulatif")
-        m1, m2, m3, m4 = st.columns(4)
-        m1.metric("N° Facture", invoice.invoice_number or "—")
-        m2.metric("Date Facture", invoice.invoice_date or "—")
-        m3.metric("Nombre de contrats", len(invoice.contracts))
-        m4.metric("Total (MAD)", fmt_money(invoice.total))
+        # Combiner tous les dataframes de contrats en un seul
+        all_dfs = []
+        for inv in invoices_list:
+            all_dfs.append(contracts_dataframe(inv))
+        
+        if all_dfs:
+            import pandas as pd
+            final_df = pd.concat(all_dfs, ignore_index=True)
+            st.dataframe(final_df, use_container_width=True, hide_index=True)
+            
+            # Téléchargement Excel pour toutes les factures
+            # Note: Cette partie nécessiterait une fonction pour combiner tous les contrats en Excel
+            st.download_button(
+                "📥 Télécharger toutes les données (Excel)",
+                data=contracts_to_excel_batch(invoices_list, plant, dept, project),
+                file_name=safe_filename(
+                    f"{plant or 'usine'}_{dept or 'dept'}_{project or 'projet'}_batch_contrats"
+                ) + ".xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            )
 
-        st.subheader("Détail des contrats")
-        df = contracts_dataframe(invoice)
-        st.dataframe(df, use_container_width=True, hide_index=True)
-
-        # Téléchargement Excel
-        excel_bytes = contracts_to_excel(invoice, plant, dept, project)
-        st.download_button(
-            "📥 Télécharger le détail des contrats (Excel)",
-            data=excel_bytes,
-            file_name=safe_filename(
-                f"{plant or 'usine'}_{dept or 'dept'}_{project or 'projet'}"
-                f"_{invoice.invoice_number or 'contrats'}"
-            ) + "_contrats.xlsx",
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        )
-
-        with st.expander("Afficher le JSON complet extrait"):
-            st.json(invoice.to_dict(), expanded=False)
+        with st.expander("Afficher le JSON complet de toutes les factures"):
+            all_invoices_dict = [inv.to_dict() for inv in invoices_list]
+            st.json(all_invoices_dict, expanded=False)
 
         st.divider()
-        st.subheader("Enregistrer cette facture")
+        st.subheader("Enregistrer toutes ces factures")
 
-        record = save_invoice_record(invoice, plant, dept, project)
-        json_bytes = json.dumps(record, indent=2, ensure_ascii=False).encode("utf-8")
-
-        # Auto-sauvegarde
+        # Enregistrement batch
         if plant and dept and project:
-            invoice_key = f"{plant}_{dept}_{project}_{invoice.invoice_number}"
-            if not st.session_state.get(f"saved_{invoice_key}"):
-                DATA_DIR.mkdir(exist_ok=True)
-                filename = safe_filename(f"{plant}_{dept}_{project}_{invoice.invoice_number or 'facture'}") + ".json"
-                per_file = DATA_DIR / filename
-                per_file.write_text(json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")
-                append_to_master(record)
+            batch_key = f"{plant}_{dept}_{project}_batch_{len(invoices_list)}"
+            if not st.session_state.get(f"saved_{batch_key}"):
                 try:
-                    invoice_id = db.save_invoice(record)
-                    st.session_state[f"saved_{invoice_key}"] = True
-                    st.success(f"✅ Sauvegarde automatique effectuée — SQLite (id={invoice_id})")
+                    for inv in invoices_list:
+                        record = save_invoice_record(inv, plant, dept, project)
+                        db.save_invoice(record)
+                    st.session_state[f"saved_{batch_key}"] = True
+                    st.success(f"✅ {len(invoices_list)} factures sauvegardées dans SQLite")
                 except Exception as exc:
-                    st.warning(f"Fichiers JSON enregistrés, mais SQLite a échoué : {exc}")
+                    st.warning(f"SQLite a échoué pour certaines factures : {exc}")
             else:
                 st.success(f"✅ Déjà sauvegardé pour {plant} / {dept} / {project}.")
-
-            st.download_button(
-                "📥 Télécharger le JSON",
-                data=json_bytes,
-                file_name=safe_filename(f"{plant}_{dept}_{project}_{invoice.invoice_number or 'facture'}") + ".json",
-                mime="application/json",
-            )
         else:
             st.info("Choisissez Usine → Département → Projet dans la barre latérale pour activer la sauvegarde.")
-            st.download_button("📥 Télécharger le JSON (sans catégorie)", data=json_bytes, file_name="facture.json", mime="application/json")
     else:
-        st.info("Téléchargez un PDF puis cliquez sur Extraire les données pour commencer.")
+        st.info("Téléchargez un ou plusieurs PDF puis cliquez sur Extraire les données pour commencer.")
 # ============================================================ ONGLET DÉPENSES
 with tab_expenses:
     st.subheader("Calculer le budget restant")
@@ -307,30 +334,53 @@ with tab_expenses:
                     
                     st.markdown(f"**Centre de coût (Cost Center ID) :** `{cc_id}`")
                     
-                    # Récupération de la facture en cours
+                    # Récupération de la facture en cours (support single et batch)
                     current_invoice = st.session_state.get("invoice")
+                    all_invoices = st.session_state.get("all_invoices", [])
                     
+                    # Déterminer quelle facture utiliser
                     if current_invoice is not None:
+                        # Mode single facture
+                        invoices_to_analyze = [current_invoice]
+                        st.info("📄 Analyse de la facture unique")
+                    elif all_invoices:
+                        # Mode batch - analyser toutes les factures extraites
+                        invoices_to_analyze = all_invoices
+                        st.info(f"📊 Analyse batch : {len(all_invoices)} facture(s) extraite(s)")
+                    else:
+                        invoices_to_analyze = []
+                    
+                    if invoices_to_analyze:
                         st.subheader("📊 Écart Budget vs Dépenses")
                         
-                        # CORRECTION ICI : On convertit l'objet InvoiceData en dictionnaire
-                        invoice_dict = current_invoice.to_dict()
+                        # Calculer le total cumulé de toutes les factures
+                        total_all_invoices = 0
+                        all_analyses = []
                         
-                        # Appel de la fonction avec le dictionnaire compatible
-                        analysis = calculate_expenses(invoice_dict, allocated_budget)
+                        for inv in invoices_to_analyze:
+                            # CORRECTION ICI : On convertit l'objet InvoiceData en dictionnaire
+                            invoice_dict = inv.to_dict()
+                            
+                            # Appel de la fonction avec le dictionnaire compatible
+                            analysis = calculate_expenses(invoice_dict, allocated_budget)
+                            all_analyses.append(analysis)
+                            total_all_invoices += analysis["total"]
                         
-                        total_invoice = analysis["total"]
-                        remaining_budget = analysis["expenses"]
+                        total_invoice = total_all_invoices
+                        remaining_budget = allocated_budget - total_invoice
                         
                         # Affichage des métriques (KPIs)
                         kpi1, kpi2, kpi3 = st.columns(3)
                         with kpi1:
                             st.metric(label="Budget Alloué", value=fmt_money(allocated_budget))
                         with kpi2:
-                            st.metric(label="Dépenses Facture (TTC)", value=fmt_money(total_invoice), delta=f"{fmt_money(total_invoice)} Utilisés", delta_color="inverse")
+                            facture_label = f"Dépenses Facture{'s' if len(invoices_to_analyze) > 1 else ''} (TTC)"
+                            delta_text = f"{fmt_money(total_invoice)} Utilisé{'s' if len(invoices_to_analyze) > 1 else ''}"
+                            st.metric(label=facture_label, value=fmt_money(total_invoice), delta=delta_text, delta_color="inverse")
                         with kpi3:
                             color_status = "normal" if remaining_budget >= 0 else "inverse"
-                            st.metric(label="Budget Restant Évalué", value=fmt_money(remaining_budget), delta=f"{fmt_money(remaining_budget)} Restants", delta_color=color_status)
+                            restant_label = f"Budget Restant Évalué ({len(invoices_to_analyze)} facture{'s' if len(invoices_to_analyze) > 1 else ''})"
+                            st.metric(label=restant_label, value=fmt_money(remaining_budget), delta=f"{fmt_money(remaining_budget)} Restants", delta_color=color_status)
                             
                         # Barre de progression
                         if allocated_budget > 0:
@@ -338,8 +388,21 @@ with tab_expenses:
                             st.progress(progress_percent, text=f"Utilisation du budget : {progress_percent * 100:.1f}%")
                             if remaining_budget < 0:
                                 st.error(f"🚨 Dépassement budgétaire détecté de {fmt_money(abs(remaining_budget))} !")
+                        
+                        # Afficher le détail par facture si batch
+                        if len(invoices_to_analyze) > 1:
+                            with st.expander("📋 Détail par facture"):
+                                detail_data = []
+                                for idx, (inv, analysis) in enumerate(zip(invoices_to_analyze, all_analyses)):
+                                    detail_data.append({
+                                        "Facture": inv.invoice_number or f"Facture {idx+1}",
+                                        "Date": inv.invoice_date or "—",
+                                        "Montant TTC": fmt_money(analysis["total"]),
+                                        "% Budget": f"{(analysis['total']/allocated_budget*100):.1f}%" if allocated_budget > 0 else "N/A"
+                                    })
+                                st.dataframe(detail_data, use_container_width=True)
                     else:
-                        st.info("💡 Facture non détectée. Importez et extrayez d'abord une facture Maroc Telecom dans l'onglet principal pour calculer l'écart.")
+                        st.info("💡 Facture non détectée. Importez et extrayez d'abord une ou plusieurs factures Maroc Telecom dans l'onglet principal pour calculer l'écart.")
                         st.metric(label="Budget Alloué Trouvé", value=fmt_money(allocated_budget))
                         
                 else:
